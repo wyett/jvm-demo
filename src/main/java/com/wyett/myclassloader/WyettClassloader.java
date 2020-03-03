@@ -42,7 +42,7 @@ public class WyettClassloader extends ClassLoader {
         InputStream is = null;
 
         try {
-            name = name.replaceAll(".", "\\");
+            name = name.replace(".", "\\");
             String fileName = loadPath + name + FILE_SUFFIX;
             File file = new File(fileName);
             is = new FileInputStream(file);
@@ -72,7 +72,7 @@ public class WyettClassloader extends ClassLoader {
 
     }
 
-    protected Class<?> findClass(String name) {
+    protected Class<?> findClass(String name) throws ClassNotFoundException {
         byte[] data = loadClassData(name);
         return defineClass(name, data, 0, data.length);
     }
