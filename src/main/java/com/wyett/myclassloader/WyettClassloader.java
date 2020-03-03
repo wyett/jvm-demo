@@ -18,8 +18,8 @@ public class WyettClassloader extends ClassLoader {
     //
     private String loadPath;
 
-    public String getLoadPath() {
-        return loadPath;
+    public void setLoadPath(String loadPath) {
+        this.loadPath = loadPath;
     }
 
     public WyettClassloader(ClassLoader parentClassLoader, String classLoaderName) {
