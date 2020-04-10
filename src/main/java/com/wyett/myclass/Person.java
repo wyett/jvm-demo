@@ -1,4 +1,4 @@
-package com.wyett;
+package com.wyett.myclass;
 
 /**
  * @author : wyettLei
@@ -7,4 +7,7 @@ package com.wyett;
  */
 
 public class Person {
+    public Person() {
+        System.out.println("Person constructor");
+    }
 }

@@ -12,7 +12,7 @@ import com.wyett.myclassloader.WyettClassloader;
 public class TestClassLoaderNameSpace {
     public static void main(String[] args) throws ClassNotFoundException {
         WyettClassloader wyettClassloader = new WyettClassloader("wyett");
-        wyettClassloader.setLoadPath("E:\\mycode\\mygit\\jvm-demo");
+        wyettClassloader.setLoadPath("E:\\mycode\\mygit\\jvm-demo\\");
         Class<?> clazz = wyettClassloader.loadClass("com.wyett.allentrust.NewPerson");
         System.out.println("NewPerson使用" + clazz.getClassLoader() + "加载");
         System.out.println("NewDog使用" + Dog.class.getClassLoader() + "加载");
